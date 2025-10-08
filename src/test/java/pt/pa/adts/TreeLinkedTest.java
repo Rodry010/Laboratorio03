@@ -73,7 +73,6 @@ class TreeLinkedTest {
     }
 
     @Test
-<<<<<<< Updated upstream
     void testIterableElements() {
         List<String> elements = new ArrayList<>();
         elements.add("Ecosystem");
@@ -92,7 +91,6 @@ class TreeLinkedTest {
 
     }
 
-=======
     void testDegree(){
         assertEquals(2, myTree.degree(posTune));
     }
@@ -102,6 +100,4 @@ class TreeLinkedTest {
         List<Position<String>> child = (ArrayList<Position<String>>) myTree.children(posShark);
         assertEquals(posDolphin, child.get(0));
     }
->>>>>>> Stashed changes
-
 }
