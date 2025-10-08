@@ -3,6 +3,9 @@ package pt.pa.adts;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 class TreeLinkedTest {
@@ -67,4 +70,25 @@ class TreeLinkedTest {
             myTree.insert(null, "Invalid");
         });
     }
+
+    @Test
+    void testIterableElements() {
+        List<String> elements = new ArrayList<>();
+        elements.add("Ecosystem");
+        elements.add("Anchovy");
+        elements.add("Tuna");
+        elements.add("Mackerel");
+        elements.add("Barracuda");
+        elements.add("Sardine");
+        elements.add("Shark");
+        elements.add("Dolphin");
+        elements.add("Eagles");
+        elements.add("Snakes");
+        elements.add("Rabbits");
+
+        assertEquals(elements, myTree.elements());
+
+    }
+
+
 }
