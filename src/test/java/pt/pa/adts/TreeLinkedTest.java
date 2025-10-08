@@ -50,6 +50,19 @@ class TreeLinkedTest {
 
     @Test
     void testInsertShouldReturnCorrectPosition() {
+        assertEquals("Barracuda", posBarracuda.element());
+    }
 
+    @Test
+    void testRemoveShouldReturnCorrectPosition() {
+        String removed = myTree.remove(posBarracuda);
+        assertEquals("Barracuda", removed);
+    }
+
+    @Test
+    void testInsertThrowsInvalidPositionException() {
+        assertThrows(InvalidPositionException.class, () -> {
+            myTree.insert(null, "Invalid");
+        });
     }
 }
