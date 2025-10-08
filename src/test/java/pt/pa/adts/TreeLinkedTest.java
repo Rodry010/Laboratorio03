@@ -10,12 +10,13 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class TreeLinkedTest {
 
-    private TreeLinked<String> myTree;
+    private Tree<String> myTree;
     private Position<String> root;
     private Position<String> posTune;
     private Position<String> posShark;
     private Position<String> posEagles;
     private Position<String> posBarracuda;
+    private Position<String> posDolphin;
 
     @BeforeEach
     void setup() {
@@ -27,7 +28,7 @@ class TreeLinkedTest {
         posEagles = myTree.insert(root, "Eagles");
         myTree.insert(posTune, "Mackerel");
         posBarracuda = myTree.insert(posTune, "Barracuda");
-        myTree.insert(posShark, "Dolphin");
+        posDolphin= myTree.insert(posShark, "Dolphin");
         myTree.insert(posEagles, "Snakes");
         myTree.insert(posEagles, "Rabbits");
         myTree.insert(posBarracuda, "Sardine");
@@ -72,6 +73,7 @@ class TreeLinkedTest {
     }
 
     @Test
+<<<<<<< Updated upstream
     void testIterableElements() {
         List<String> elements = new ArrayList<>();
         elements.add("Ecosystem");
@@ -90,5 +92,16 @@ class TreeLinkedTest {
 
     }
 
+=======
+    void testDegree(){
+        assertEquals(2, myTree.degree(posTune));
+    }
+
+    @Test
+    void testChildren(){
+        List<Position<String>> child = (ArrayList<Position<String>>) myTree.children(posShark);
+        assertEquals(posDolphin, child.get(0));
+    }
+>>>>>>> Stashed changes
 
 }

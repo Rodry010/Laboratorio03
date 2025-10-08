@@ -158,5 +158,8 @@ public interface Tree<E> {
    */
   boolean isAncestor(Position<E> lowerItem, Position<E> upperItem);
 
+  public int degree(Position<E> position)
+          throws InvalidPositionException;
+
 }
 

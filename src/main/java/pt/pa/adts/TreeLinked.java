@@ -312,4 +312,15 @@ public class TreeLinked<E> implements Tree<E> {
         }
 
     }
+
+    public int degree(Position<E> position) throws InvalidPositionException{
+        if (position == null) {
+            throw new InvalidPositionException();
+        }
+        int count=0;
+        for(Position<E> child:children(position)){
+            count++;
+        }
+        return count;
+    }
 }

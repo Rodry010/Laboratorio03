@@ -1,6 +1,7 @@
 package pt.pa;
 
 import pt.pa.adts.Position;
+import pt.pa.adts.Tree;
 import pt.pa.adts.TreeLinked;
 
 /**
@@ -13,7 +14,7 @@ public class Main {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        TreeLinked<String> myTree = new TreeLinked<>("Ecosystem");
+        Tree<String> myTree = new TreeLinked<>("Ecosystem");
         Position<String> root = myTree.root();
         myTree.insert(root, "Anchovy");
         Position<String> posTune = myTree.insert(root, "Tuna");
