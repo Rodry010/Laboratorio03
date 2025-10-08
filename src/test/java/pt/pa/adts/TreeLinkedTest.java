@@ -49,4 +49,9 @@ class TreeLinkedTest {
     void isRoot() {
         assertEquals(true, myTree.isRoot(root));
     }
+
+    @Test
+    void testInsertShouldReturnCorrectPosition() {
+
+    }
 }
