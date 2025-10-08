@@ -7,6 +7,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class TreeLinkedTest {
 
+
     @BeforeEach
     void setup(){
         TreeLinked<String> myTree = new TreeLinked<>("Ecosystem");
@@ -40,5 +41,10 @@ class TreeLinkedTest {
 
     @Test
     void isRoot() {
+    }
+
+    @Test
+    void testInsertShouldReturnCorrectPosition() {
+
     }
 }
