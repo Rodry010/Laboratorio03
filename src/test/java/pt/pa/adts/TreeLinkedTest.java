@@ -42,9 +42,11 @@ class TreeLinkedTest {
 
     @Test
     void isExternal() {
+        assertEquals(false, myTree.isExternal(posTune));
     }
 
     @Test
     void isRoot() {
+        assertEquals(true, myTree.isRoot(root));
     }
 }
